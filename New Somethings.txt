@@ -1,0 +1,5 @@
++ preloader
++ clip-path
++ fw in font awesome icon to have same width
++ display html by js
++ filter items
