@@ -1623,7 +1623,7 @@ a {
   }
 }
 .question {
-  background: url(/src/statics/img/background_question.jpg) center/cover no-repeat fixed;
+  background: url(/docs/statics/img/background_question.jpg) center/cover no-repeat fixed;
   padding: 30px 0;
 }
 .question-item {
@@ -2034,7 +2034,7 @@ a {
 /* intro section */
 .intro {
   padding: 83px 0 79px;
-  background: #aaa url(/src/statics/img/background_intro.jpg) center/cover no-repeat;
+  background: #aaa url(/docs/statics/img/background_intro.jpg) center/cover no-repeat;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }

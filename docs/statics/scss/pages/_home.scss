@@ -592,7 +592,7 @@
 
 // question section
 .question {
-  background: url(/src/statics/img/background_question.jpg) center/cover no-repeat fixed;
+  background: url(/docs/statics/img/background_question.jpg) center/cover no-repeat fixed;
   padding: 30px 0;
   &-item {
     padding: 46px 30px 48px 40px;
@@ -964,7 +964,7 @@
 /* intro section */
 .intro {
   padding: 83px 0 79px;
-  background: $greyAAA url(/src/statics/img/background_intro.jpg) center/cover no-repeat;
+  background: $greyAAA url(/docs/statics/img/background_intro.jpg) center/cover no-repeat;
   @include transitionAll(0.25s);
 
   &-wrap {
