@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="car dealer, sell car, special car">
+  <script src="https://kit.fontawesome.com/9f07e15af3.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./statics/css/main.css">
+  <title>Car Dealership</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-top">
+        <div class="header-top-left d-flex">
+          <div class="header-top__item header-top__item-expanded">
+            english <i class="header-top__item-icon fas fa-chevron-down"></i>
+            <ul class="header-top__item-list d-none">
+              <li class="header-top__item-item"><a href="#">vietnamese</a></li>
+            </ul>
+          </div>
+          <div class="header-top__item header-top__item-expanded">
+            currency (Euro) <i class="header-top__item-icon fas fa-chevron-down"></i>
+            <ul class="header-top__item-list d-none">
+              <li class="header-top__item-item"><a href="#">vnd</a></li>
+              <li class="header-top__item-item"><a href="#">usd</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-top-right d-flex">
+          <ul class="ul-none d-flex">
+            <li class="header-top__item"><a href="tel:+1 212-226-3126"><i class="header-top__item-icon fas fa-phone"></i> +1 212-226-3126</a></li>
+            <li class="header-top__item"><i class="header-top__item-icon fas fa-map-marker-alt"></i> 1010 MOON AVE, NEW YORK, NY US</li>
+            <li class="header-top__item"><i class="header-top__item-icon far fa-clock"></i> mon - sat 8.00 - 18.00</li>
+          </ul>
+          <div class="header-top__item header-top-user">
+            <a href="#"><i class="header-top__item-icon fas fa-user"></i> login</a>
+            <span class="header-top__item-slash"></span>
+            <a href="#">register</a>
+          </div>
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="header-logo">
+          <a href="#">
+            <img class="header-logo__img" src="./statics/img/logo.svg" alt="logo">
+          </a>
+          <div class="header-bars-icon">
+            <span class="header-bars-icon__component"></span>
+            <span class="header-bars-icon__component"></span>
+            <span class="header-bars-icon__component"></span>
+          </div>
+        </div>
+        
+        <div class="header-nav" id="header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__item"><a href="/">home</a></li>
+            <li class="header-nav__item"><a href="#">inventory</a></li>
+            <li class="header-nav__item">
+              <div class="header-nav__item-wrap">
+                <a class="header-nav__item-text" href="#">pages</a>
+                <span class="header-nav__item-icon"><i class="fas fa-chevron-right"></i></span>
+              </div>
+              <ul class="header-nav-pages">
+                <li class="header-nav-pages__item"><a href="#">about us</a></li>
+                <li class="header-nav-pages__item"><a href="#">auto loan calculator</a></li>
+                <li class="header-nav-pages__item"><a href="#">vehicle comparison</a></li>
+                <li class="header-nav-pages__item"><a href="#">sell a car</a></li>
+                <li class="header-nav-pages__item"><a href="#">services</a></li>
+                <li class="header-nav-pages__item"><a href="#">faq</a></li>
+              </ul>
+            </li>
+            <li class="header-nav__item">
+              <div class="header-nav__item-wrap">
+                <a class="header-nav__item-text" href="#">mega menu</a>
+                <span class="header-nav__item-icon"><i class="fas fa-chevron-right"></i></span>
+              </div>
+              <div class="header-nav-menu">
+                <div class="header-nav-col">
+                  <h4 class="header-nav-col__heading">special offers</h4>
+                  <div class="header-nav-col__offer">
+                    <img class="header-nav-col__offer-img" src="./statics/img/mega-menu_01.jpg" alt="car special">
+                    <div>
+                      <a href="#" class="header-nav-col__offer-name">ford explorer 2015 4wd</a>
+                      <div><span class="header-nav-col__offer-old">$65 000</span><span class="header-nav-col__offer-new">$56 000</span></div>
+                    </div>
+                  </div>
+                  <div class="header-nav-col__offer">
+                    <img class="header-nav-col__offer-img" src="./statics/img/mega-menu_02.jpg" alt="car special">
+                    <div>
+                      <a href="#" class="header-nav-col__offer-name">chevronlet malibu 2016 lt</a>
+                      <div><span class="header-nav-col__offer-old">$29 510</span><span class="header-nav-col__offer-new">$27 000</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-nav-col">
+                  <h4 class="header-nav-col__heading">new vehicles</h4>
+                  <ul class="ul-none">
+                    <li class="header-nav-col__item">
+                      <a class="header-nav-col__link" href="#">
+                        <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                        new vehicles
+                      </a>
+                    </li>
+                    <li class="header-nav-col__item">
+                      <a class="header-nav-col__link" href="#">
+                        <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                        chevrolet Cars
+                      </a>
+                    </li>
+                    <li class="header-nav-col__item">
+                      <a class="header-nav-col__link" href="#">
+                        <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                        off-road cars
+                      </a>
+                    </li>
+                    <li class="header-nav-col__item">
+                      <a class="header-nav-col__link" href="#">
+                        <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                        tesla cars
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="header-nav-col">
+                  <h4 class="header-nav-col__heading">Quick Search</h4>
+                  <ul class="ul-none">
+                    <li class="header-nav-col__item">
+                      <a class="header-nav-col__link" href="#">
+                        <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                        c-class cars
+                      </a>
+                    </li>
+                    <li class="header-nav-col__item">
+                      <a class="header-nav-col__link" href="#">
+                        <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                        used vehicles
+                      </a>
+                    </li>
+                    <li class="header-nav-col__item">
+                      <a class="header-nav-col__link" href="#">
+                        <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                        cheaper cars
+                      </a>
+                    </li>
+                    <li class="header-nav-col__item">
+                      <a class="header-nav-col__link" href="#">
+                        <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                        older than 2000
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="header-nav-col">
+                  <h4 class="header-nav-col__heading">contacts</h4>
+                  <ul class="ul-none">
+                    <li class="header-nav-col__item header-nav-col__contact">
+                      <i class="header-nav-col__icon fas fa-map-marker-alt"></i>
+                      cardealership@gmail.com
+                    </li>
+                    <li class="header-nav-col__item header-nav-col__contact">
+                      <i class="header-nav-col__icon fas fa-phone"></i>
+                      +039 6762 825
+                    </li>
+                    <li class="header-nav-col__item header-nav-col__contact">
+                      <i class="header-nav-col__icon fas fa-home"></i>
+                      5348 Vegas Dr, NV, Las Vegas
+                    </li>
+                    <li class="header-nav-col__item header-nav-col__contact">
+                      <i class="header-nav-col__icon fas fa-envelope"></i>
+                      support@gmail.com
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="header-nav__item"><a href="#">blog</a></li>
+            <li class="header-nav__item"><a href="#">shop</a></li>
+            <li class="header-nav__item"><a href="#">contact</a></li>
+            <li class="header-nav__item"><a href="#">account</a></li>
+            <li class="header-nav__item"><a href="#">compare</a></li>
+            <li class="header-nav__item"><a href="#">cart</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex">
+          <div class="header-main__location">
+            <span class="header-main__icon"><i class="fas fa-map-marker-alt"></i></span>
+            <p class="header-main__address">1840 E GARVEY AVE SOUTH WEST COVINA, CA 91791 <span class="header-main__special-text header-main__special-text--underline">view on map</span></p>
+          </div>
+          <div class="header-main__sale">
+            <span class="header-main__icon header-main__icon--rotate"><i class="fas fa-phone"></i></span>
+            <div>
+              <p class="header-main__special-text">sales:</p>
+              <a class="header-main__sale-number" href="tel:878-9674-4455">878-9674-4455</a>
+            </div>
+          </div>
+          <div class="header-main__number">
+            <p class="header-main__special-text">service : <a class="header-main__oficial-number" href="tel:878-3853-9576">878-3853-9576</a></p>
+            <p class="header-main__special-text">part : <a class="header-main__oficial-number" href="tel:878-0505-0440">878-0505-0440</a></p>
+          </div>
+          <div class="header-main__social">
+            <span class="header-main__icon header-main__icon--social"><i class="fab fa-facebook-f"></i></span>
+            <span class="header-main__icon header-main__icon--social margin-right-0"><i class="fab fa-twitter"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-wrap">
+        <ul class="ul-none navbar-menu">
+          <li><a class="navbar-item__link active" href="/">home</a></li>
+          <li><a class="navbar-item__link" href="#">inventory</a></li>
+          <li class="navbar-pages">
+            <a class="navbar-item__link" href="#">pages</a>
+            <ul class="ul-none navbar-pages__list">
+              <li><a class="navbar-pages__item" href="#">about us</a></li>
+              <li><a class="navbar-pages__item" href="#">auto loan calculator</a></li>
+              <li><a class="navbar-pages__item" href="#">vehicle comparison</a></li>
+              <li><a class="navbar-pages__item" href="#">sell a car</a></li>
+              <li><a class="navbar-pages__item" href="#">services</a></li>
+              <li><a class="navbar-pages__item" href="#">faq</a></li>
+            </ul>
+          </li>
+          <li class="navbar-mega">
+            <a class="navbar-item__link navbar-menu" href="#">mega menu</a>
+            <div class="header-nav-menu">
+              <div class="header-nav-col">
+                <h4 class="header-nav-col__heading">special offers</h4>
+                <div class="header-nav-col__offer">
+                  <img class="header-nav-col__offer-img" src="./statics/img/mega-menu_01.jpg" alt="car special">
+                  <div>
+                    <a href="#" class="header-nav-col__offer-name">ford explorer 2015 4wd</a>
+                    <div><span class="header-nav-col__offer-old">$65 000</span><span class="header-nav-col__offer-new">$56 000</span></div>
+                  </div>
+                </div>
+                <div class="header-nav-col__offer">
+                  <img class="header-nav-col__offer-img" src="./statics/img/mega-menu_02.jpg" alt="car special">
+                  <div>
+                    <a href="#" class="header-nav-col__offer-name">chevronlet malibu 2016 lt</a>
+                    <div><span class="header-nav-col__offer-old">$29 510</span><span class="header-nav-col__offer-new">$27 000</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-nav-col">
+                <h4 class="header-nav-col__heading">new vehicles</h4>
+                <ul class="ul-none">
+                  <li class="header-nav-col__item">
+                    <a class="header-nav-col__link" href="#">
+                      <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                      new vehicles
+                    </a>
+                  </li>
+                  <li class="header-nav-col__item">
+                    <a class="header-nav-col__link" href="#">
+                      <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                      chevrolet Cars
+                    </a>
+                  </li>
+                  <li class="header-nav-col__item">
+                    <a class="header-nav-col__link" href="#">
+                      <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                      off-road cars
+                    </a>
+                  </li>
+                  <li class="header-nav-col__item">
+                    <a class="header-nav-col__link" href="#">
+                      <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                      tesla cars
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header-nav-col">
+                <h4 class="header-nav-col__heading">Quick Search</h4>
+                <ul class="ul-none">
+                  <li class="header-nav-col__item">
+                    <a class="header-nav-col__link" href="#">
+                      <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                      c-class cars
+                    </a>
+                  </li>
+                  <li class="header-nav-col__item">
+                    <a class="header-nav-col__link" href="#">
+                      <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                      used vehicles
+                    </a>
+                  </li>
+                  <li class="header-nav-col__item">
+                    <a class="header-nav-col__link" href="#">
+                      <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                      cheaper cars
+                    </a>
+                  </li>
+                  <li class="header-nav-col__item">
+                    <a class="header-nav-col__link" href="#">
+                      <i class="header-nav-col__icon fas fa-arrow-circle-right"></i>
+                      older than 2000
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header-nav-col">
+                <h4 class="header-nav-col__heading">contacts</h4>
+                <ul class="ul-none">
+                  <li class="header-nav-col__item header-nav-col__contact">
+                    <i class="header-nav-col__icon fas fa-map-marker-alt"></i>
+                    cardealership@gmail.com
+                  </li>
+                  <li class="header-nav-col__item header-nav-col__contact">
+                    <i class="header-nav-col__icon fas fa-phone"></i>
+                    +039 6762 825
+                  </li>
+                  <li class="header-nav-col__item header-nav-col__contact">
+                    <i class="header-nav-col__icon fas fa-home"></i>
+                    5348 Vegas Dr, NV, Las Vegas
+                  </li>
+                  <li class="header-nav-col__item header-nav-col__contact">
+                    <i class="header-nav-col__icon fas fa-envelope"></i>
+                    support@gmail.com
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a class="navbar-item__link" href="#">blog</a></li>
+          <li><a class="navbar-item__link" href="#">shop</a></li>
+          <li><a class="navbar-item__link" href="#">contact</a></li>
+        </ul>
+        <ul class="ul-none navbar-help">
+          <li>
+            <a class="navbar-item__link navbar-item__link-wrap" href="#">
+              compare <i class="navbar-item__link-icon material-icons-outlined">speed</i>
+            </a>
+          </li>
+          <li>
+            <a class="navbar-item__link navbar-item__link-wrap" href="#">
+              cart <i class="navbar-item__link-icon material-icons-outlined">shopping_bag</i>
+            </a> 
+          </li>
+          <li><a class="navbar-item__link-search" href="#"><i class="fas fa-search"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="carousel">
+    <div class="slide slide-first">
+      <img class="slide__img" src="./statics/img/carousel_car-2.jpg" alt="car">
+      <div class="slide__content">
+        <h2 class="slide__content-year">2021</h2>
+        <h2 class="slide__content-name">FORD MUSTANG MACH-E</h2>
+        <div class="slide__content-price">
+          <span class="slide__content-price-sign">$</span>
+          <span class="slide__content-price-number">319</span>
+          <div class="slide__content-price-month"><span class="slide__content-price-month--slash">/</span>MO <p class="slide__content-price-duration">FOR 36 MONTH</p></div>
+        </div>
+        <h4 class="slide__content-fee">$0 at signing after $1,750 cash back</h4>
+        <h4 class="slide__content-fee">$0 first payment paid by Ford up to $325</h4>
+        <h4 class="slide__content-fee">Taxes, title and fees extra.</h4>
+      </div>
+    </div>
+    <div class="slide slide-second d-none">
+      <img class="slide__img" src="./statics/img/carousel_car-1.jpg" alt="car">
+      <div class="slide__content">
+        <h2 class="slide__content-year">2021</h2>
+        <h2 class="slide__content-name">NEW BMW 5-SERIES</h2>
+        <div class="slide__content-price">
+          <span class="slide__content-price-sign">$</span>
+          <span class="slide__content-price-number">516</span>
+          <div class="slide__content-price-month"><span class="slide__content-price-month--slash">/</span>MO <p class="slide__content-price-duration">FOR 36 MONTH</p></div>
+        </div>
+        <h4 class="slide__content-fee">$0 at signing after $1,750 cash back</h4>
+        <h4 class="slide__content-fee">$0 first payment paid by Ford up to $325</h4>
+        <h4 class="slide__content-fee">Taxes, title and fees extra.</h4>
+        <a class="slide__content-btn" href="#"><i class="slide__content-btn-icon material-icons">engineering</i> LEARN MORE</a>
+      </div>
+    </div>
+    <div class="slide-control slide-control-prev">
+      <span class="slide-control__icon"><i class="fas fa-chevron-left"></i></span>
+      <img class="slide-control__img" id="slide-control__img-prev" src="./statics/img/carousel_car-2.jpg" alt="car">
+    </div>
+    <div class="slide-control slide-control-next">
+      <img class="slide-control__img" id="slide-control__img-next" src="./statics/img/carousel_car-2.jpg" alt="car">
+      <span class="slide-control__icon"><i class="fas fa-chevron-right"></i></span>
+    </div>
+  </section>
+
+  <section class="dealer">
+    <div class="dealer-control text-uppercase">
+      <div class="container dealer-control-wrap">
+        <div>
+          <h2 class="dealer-control__title">car dealer</h2>
+          <ul class="ul-none dealer-control__list">
+            <li><a href="#car-listing-category-new-cars" class="dealer-control__link active" data-id="new-cars">new cars</a></li>
+            <li><a href="#car-listing-category-used-cars" class="dealer-control__link" data-id="used-cars">used cars</a></li>
+            <li><a href="#car-listing-tab-search" class="dealer-control__link" data-id="dealer-search">search inventory</a></li>
+          </ul>
+        </div>
+        <div class="dealer-control-info">
+          <i class="dealer-control-info__icon fas fa-car"></i>
+          <div class="dealer-control-info__number"><span class="dealer-control-info__number-text">available</span> <span>24</span> cars</div>
+        </div>
+      </div>
+    </div>
+    <div  id="new-cars" class="dealer-content">
+      <div class="container grid grid-xs-1 grid-s-2 grid-md-3 grid-l-4">
+        <!-- <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">BMW 328I, SPORT LINE BODY KIT</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old d-none">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div> -->
+      </div>
+     <div class="dealer-btn">
+      <a href="#" class="dealer-btn__link">show all</a>
+     </div>
+    </div>
+    <div id="used-cars" class="dealer-content d-none">
+      <div class="container grid grid-xs-1 grid-s-2 grid-md-3 grid-l-4">
+        <!-- <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">BMW 328I, SPORT LINE BODY KIT</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div>
+        <div class="dealer-col">
+          <a href="#" class="dealer-car__link">
+            <div class="dealer-car__img-wrap">
+              <div class="overflow"></div>
+              <img class="dealer-car__img img-responsive" src="./statics/img/dealer-car-1.jpg" alt="new car">
+            </div>
+            <span class="dealer-car__special">SPECIAL</span>
+            <div class="dealer-car__model">
+              <h6 class="dealer-car__model-name">ACURA MDX 2022</h6>
+              <div class="dealer-car__model-price">
+                <h6 class="dealer-car__model-price-old">&#128;24 500</h6>
+                <h6 class="dealer-car__model-price-new">&#128;18 200</h6>
+              </div>
+            </div>
+            <div class="dealer-car__info">
+              <span class="dealer-car__info-item">20 <i class="fas fa-road"></i></span>
+              <span class="dealer-car__info-item">16.0 <i class="fas fa-gas-pump"></i></span>
+              <span class="dealer-car__info-item">semi-automatic <i class="fas fa-car"></i></span>
+            </div>
+          </a>
+        </div> -->
+      </div>
+     <div class="dealer-btn">
+      <a href="#" class="dealer-btn__link">show all</a>
+     </div>
+    </div>
+    <div id="dealer-search" class="dealer-search d-none">
+      <div class="container">
+        <div class="dealer-search-title d-flex">
+          <img class="dealer-search-title__img" src="./statics/img/car-search-icon.png" alt="car search icon">
+          <h2 class="dealer-search-title__text">Search Inventory</h2>
+        </div>
+        <form class="grid grid-md-2 grid-l-4">
+          <div class="dealer-search-select">
+            <div class="dealer-search-select__title">
+              <h4 class="dealer-search-select__title-text" data-reset="select body">select body</h4>
+              <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="dealer-search-select__content d-none">
+              <div class="dealer-search-select__input-wrap">
+                <input type="text" class="dealer-search-select__input">
+              </div>
+              <ul class="dealer-search-select__list ul-none">
+                <li class="dealer-search-select__item dealer-search-select__item--reset">select body</li>
+                <li class="dealer-search-select__item">compact</li>
+                <li class="dealer-search-select__item">convertible</li>
+                <li class="dealer-search-select__item">coupe</li>
+                <li class="dealer-search-select__item">Off-Road</li>
+                <li class="dealer-search-select__item">pickup</li>
+                <li class="dealer-search-select__item">sedan</li>
+                <li class="dealer-search-select__item">station wagon</li>
+                <li class="dealer-search-select__item">SUV</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dealer-search-select">
+            <div class="dealer-search-select__title">
+              <h4 class="dealer-search-select__title-text" data-reset="select make">select make</h4>
+              <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="dealer-search-select__content d-none">
+              <div class="dealer-search-select__input-wrap">
+                <input type="text" class="dealer-search-select__input">
+              </div>
+              <ul class="dealer-search-select__list ul-none">
+                <li class="dealer-search-select__item dealer-search-select__item--reset">select make</li>
+                <li class="dealer-search-select__item">vinfast</li>
+                <li class="dealer-search-select__item">acura</li>
+                <li class="dealer-search-select__item">Audi</li>
+                <li class="dealer-search-select__item">BMW</li>
+                <li class="dealer-search-select__item">Chevrolet</li>
+                <li class="dealer-search-select__item">Dodge</li>
+                <li class="dealer-search-select__item">Ford</li>
+                <li class="dealer-search-select__item">Honda</li>
+                <li class="dealer-search-select__item">Huyndai</li>
+                <li class="dealer-search-select__item">Kia</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dealer-search-select">
+            <div class="dealer-search-select__title">
+              <h4 class="dealer-search-select__title-text" data-reset="select mileage">select mileage</h4>
+              <span><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="dealer-search-select__content d-none">
+              <div class="dealer-search-select__input-wrap">
+                <input type="text" class="dealer-search-select__input">
+              </div>
+              <ul class="dealer-search-select__list ul-none">
+                <li class="dealer-search-select__item dealer-search-select__item--reset">select mileage</li>
+                <li class="dealer-search-select__item">10000</li>
+                <li class="dealer-search-select__item">15000</li>
+                <li class="dealer-search-select__item">20000</li>
+                <li class="dealer-search-select__item">25000</li>
+                <li class="dealer-search-select__item">5000</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dealer-search-action">
+            <button class="dealer-search-action__submit"><i class="dealer-search-action__submit-icon fas fa-search"></i>search</button>
+            <div class="dealer-search-action__reset"><i class="dealer-search-action__reset-icon fas fa-undo"></i></div>
+          </div>
+        </form>
+        <div class="dealer-search-contact">
+          <div class="dealer-search-contact__item">
+            <span class="dealer-search-contact__question-icon"><i class="fas fa-question"></i></span>
+            <p class="dealer-search-contact__text">Have a Questions? Call Today!</p>
+          </div>
+          <div class="dealer-search-contact__item">
+            <span class="dealer-search-contact__phone-icon"><i class="fas fa-phone-alt"></i></span>
+            <p class="dealer-search-contact__text">888-694-5544</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="question">
+    <div class="container grid grid-l-2">
+      <div class="question-item">
+        <a href="#" class="question-item__link">
+          <img src="./statics/img/car-search-icon.png" alt="car find icon" class="question-item__img">
+          <div>
+            <h2 class="question-item__heading">Are You looking for a car?</h2>
+            <p class="question-item__text">Our cars are delivered fully-registered with all requirements completed. We’ll deliver your car wherever you are.</p>
+          </div>
+        </a>
+      </div>
+      <div class="question-item question-item--background">
+        <a href="#" class="question-item__link">
+          <img src="./statics/img/car-dollar-icon.png" alt="sale car" class="question-item__img">
+          <div>
+            <h2 class="question-item__heading">Do You want to sell a car?</h2>
+            <p class="question-item__text">What’s your car worth? Receive the absolute best value for your trade-in vehicle. We even handle all paperwork. Schedule your appointment today!</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="special text-uppercase">
+    <div class="container">
+      <div class="special-title">
+        <h2 class="special-title__heading">specials</h2>
+        <p class="special-title__tag">
+          <i class="special-title__tag-icon fas fa-tag"></i> all <span class="special-text"> specials</span>
+        </p>
+      </div>
+      <div class="special-separator">
+        <span class="special-separator__item"></span>
+        <span class="special-separator__item special-separator__item--second"></span>
+      </div>
+      <div class="special-products">
+        <div class="special-products__container">
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-1.jpg" alt="special car">
+              </div>
+              <div class="special-car__content">
+                <div class="special-car__model">
+                  <h6 class="special-car__model-name">LEXUS 2021 RX</h6>
+                  <div class="special-car__model-price">
+                    <h6 class="special-car__model-price-old">&#128;24 500</h6>
+                    <h6 class="special-car__model-price-new">&#128;21 000</h6>
+                  </div>
+                </div>
+                <div class="special-car__info">
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-road"></i> 20</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-gas-pump"></i> 18/100</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-car"></i> Manual</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-2.jpg" alt="special car">
+              </div>
+              <div class="special-car__content">
+                <div class="special-car__model">
+                  <h6 class="special-car__model-name">ACURA MDX 2022 RX</h6>
+                  <div class="special-car__model-price">
+                    <h6 class="special-car__model-price-old">&#128;27 000</h6>
+                    <h6 class="special-car__model-price-new">&#128;26 000</h6>
+                  </div>
+                </div>
+                <div class="special-car__info">
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-road"></i> 20</span>
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-gas-pump"></i> 18/100</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-car"></i> semi-automatic</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-3.jpg" alt="special car">
+              </div>
+              <div class="special-car__content">
+                <div class="special-car__model">
+                  <h6 class="special-car__model-name">ACURA ILX 2021</h6>
+                  <div class="special-car__model-price">
+                    <h6 class="special-car__model-price-old">&#128;29 000</h6>
+                    <h6 class="special-car__model-price-new">&#128;27 000</h6>
+                  </div>
+                </div>
+                <div class="special-car__info">
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-road"></i> 20</span>
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-gas-pump"></i> 18/100</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-car"></i> semi-automatic</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-4.jpg" alt="special car">
+              </div>
+              <div class="special-car__content">
+                <div class="special-car__model">
+                  <h6 class="special-car__model-name">FORD F-150 RAPTOR 6,2L V8 AT</h6>
+                  <div class="special-car__model-price">
+                    <h6 class="special-car__model-price-old">&#128;24 500</h6>
+                    <h6 class="special-car__model-price-new">&#128;78 000</h6>
+                  </div>
+                </div>
+                <div class="special-car__info">
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-road"></i> 20</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-gas-pump"></i> 18/100</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-car"></i> automatic</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-5.jpg" alt="special car">
+              </div>
+              <div class="special-car__content">
+                <div class="special-car__model">
+                  <h6 class="special-car__model-name">RENAULT KAPTUR</h6>
+                  <div class="special-car__model-price">
+                    <h6 class="special-car__model-price-old">&#128;24 500</h6>
+                    <h6 class="special-car__model-price-new">&#128;16 000</h6>
+                  </div>
+                </div>
+                <div class="special-car__info">
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-road"></i> 3</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-gas-pump"></i> 7.2</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-car"></i> automatic</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-6.jpg" alt="special car">
+              </div>
+            </a>
+          </div>
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-7.jpg" alt="special car">
+              </div>
+              <div class="special-car__content">
+                <div class="special-car__model">
+                  <h6 class="special-car__model-name">BMW 328I, SPORT LINE BODY KIT</h6>
+                  <div class="special-car__model-price special-car__model-price--compare">
+                    <h6 class="special-car__model-price-old">&#128;35 000</h6>
+                    <h6 class="special-car__model-price-new">&#128;28 000</h6>
+                  </div>
+                </div>
+                <div class="special-car__info">
+                  <p class="special-car__info-text">DEAL AVAIABLE UNTIL FEBRUARY, 22</p>
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-road"></i> 20</span>
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-gas-pump"></i> 18/100</span>
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-car"></i> semi-automatic</span>
+              </div>
+              </div>
+            </a>
+          </div>
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-8.jpg" alt="special car">
+              </div>
+              <div class="special-car__content">
+                <div class="special-car__model">
+                  <h6 class="special-car__model-name">FORD EXPLORER 2015 4WD</h6>
+                  <div class="special-car__model-price special-car__model-price--compare">
+                    <h6 class="special-car__model-price-old">&#128;65 000</h6>
+                    <h6 class="special-car__model-price-new">&#128;58 000</h6>
+                  </div>
+                </div>
+                <div class="special-car__info">
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-road"></i> 3800</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-gas-pump"></i> 65/65</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-car"></i> automatic</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-9.jpg" alt="special car">
+              </div>
+              <div class="special-car__content">
+                <div class="special-car__model">
+                  <h6 class="special-car__model-name">CHEVROLET MALIBU 2016 LT</h6>
+                  <div class="special-car__model-price special-car__model-price--compare">
+                    <h6 class="special-car__model-price-old">&#128;29 510</h6>
+                    <h6 class="special-car__model-price-new">&#128;27 000</h6>
+                  </div>
+                </div>
+                <div class="special-car__info">
+                  <p class="special-car__info-text">Limited Offer: Only 3 Cars left</p>
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-road"></i> 20</span>
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-gas-pump"></i> 18/100</span>
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-car"></i> semi-automatic</span>
+              </div>
+              </div>
+            </a>
+          </div>
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-10.jpg" alt="special car">
+              </div>
+            </a>
+          </div>
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-11.jpg" alt="special car">
+              </div>
+              <div class="special-car__content">
+                <div class="special-car__model">
+                  <h6 class="special-car__model-name">NISSAN ALTIMA 2.5 SL, LEATHER</h6>
+                  <div class="special-car__model-price special-car__model-price--compare">
+                    <h6 class="special-car__model-price-old">&#128;25 000</h6>
+                    <h6 class="special-car__model-price-new">&#128;18 000</h6>
+                  </div>
+                </div>
+                <div class="special-car__info">
+                  <p class="special-car__info-text">Limited Offer: Only 5 Cars left</p>
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-road"></i> 20</span>
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-gas-pump"></i> 18/100</span>
+                  <span class="special-car__info-item d-none"><i class="special-car__info-item-icon fas fa-car"></i> semi-automatic</span>
+              </div>
+              </div>
+            </a>
+          </div>
+          <div class="special-col">
+            <a href="#" class="special-car__link">
+              <div class="overflow"></div>
+              <div class="special-car__img-wrap">
+                <img class="special-car__img img-responsive" src="./statics/img/special-car-12.jpg" alt="special car">
+              </div>
+              <div class="special-car__content">
+                <div class="special-car__model">
+                  <h6 class="special-car__model-name">2016 MERCEDES-BENZ C-CLASS C300</h6>
+                  <div class="special-car__model-price special-car__model-price--compare">
+                    <h6 class="special-car__model-price-old">&#128;39 600</h6>
+                    <h6 class="special-car__model-price-new">&#128;35 000</h6>
+                  </div>
+                </div>
+                <div class="special-car__info">
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-road"></i> 100</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-gas-pump"></i> 18/26</span>
+                  <span class="special-car__info-item"><i class="special-car__info-item-icon fas fa-car"></i> automatic</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      <div class="special-pagination">
+        <button class="special-pagination__btn btn-prev"><i class="fas fa-angle-left"></i></button>
+        <div class="special-pagination__dots">
+          <!-- <span class="special-pagination__dots-element active"></span>
+          <span class="special-pagination__dots-element"></span>
+          <span class="special-pagination__dots-element"></span>
+          <span class="special-pagination__dots-element"></span> -->
+        </div>
+        <button class="special-pagination__btn btn-next"><i class="fas fa-angle-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="reason">
+    <div class="container">
+      <div class="reason-title">
+        <h2 class="reason-title__heading">WHY CHOOSE US</h2>
+      </div>
+      <div class="reason-separator">
+        <span class="reason-separator__item"></span>
+        <span class="reason-separator__item reason-separator__item--second"></span>
+      </div>
+      <div class="reason-list grid grid-md-4">
+        <div class="reason-item">
+          <span class="reason-item__icon material-icons-outlined">sell</span>
+          <div>
+            <h4 class="reason-item__title">
+              FINANCING MADE EASY</h4>
+            <p class="reason-item__content">Our stress-free finance department that can find financial solutions to save you money.</p>
+          </div>
+        </div>
+        <div class="reason-item">
+          <span class="reason-item__icon material-icons-outlined">speed</span>
+          <div>
+            <h4 class="reason-item__title">WIDE RANGE OF BRANDS</h4>
+            <p class="reason-item__content">With a robust selection of popular vehicles on hand, as well as leading vehicles from BMW and Ford.</p>
+          </div>
+        </div>
+        <div class="reason-item">
+          <span class="reason-item__icon"><i class="far fa-comments"></i></span>
+          <div>
+            <h4 class="reason-item__title">TRUSTED BY THOUSANDS</h4>
+            <p class="reason-item__content">10 new offers every day. 350 offers on site, trusted by a community of thousands of users.</p>
+          </div>
+        </div>
+        <div class="reason-item">
+          <span class="reason-item__icon"><i class="far fa-clipboard"></i></span>
+          <div>
+            <h4 class="reason-item__title">CAR SERVICE & MAINTENANCE</h4>
+            <p class="reason-item__content">Our service department maintain your car to stay safe on the road for many more years.</p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="reason-btn">
+        <button class="dealer-search-action__submit"><i class="dealer-search-action__submit-icon fas fa-suitcase"></i>learn more</button>
+      </a>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="container">
+      <div class="intro-wrap">
+        <h2 class="intro__title">CAR DEALERSHIP</h2>
+        <p class="intro__content">With specialists on hand to help with any part of the car shopping or vehicle ownership experience, Motors provides financing, car service and a great selection of vehicles for luxury car shoppers in Chicago, IL. Motors is ultimate Automotive, Car Dealer WordPress theme.</p>
+        <div class="triangle-sign"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-md-2 grid-l-4 footer-content">
+        <div class="footer-column footer-column--border">
+          <h4 class="footer-title"><span class="special-text">MOTORS</span> DEALERSHIP</h4>
+          <p class="footer-text footer-text--margin">As the leading dealer in Chicago, we are confident that we will save you time and money. Motors is ultimate Automotive, Car Dealer WordPress theme.</p>
+        </div>
+        <div class="footer-column footer-column--border">
+          <h4 class="footer-title">PHOTO GALLERY</h4>
+          <div class="footer-photos">
+            <a href="#" class="footer-photos__link">
+              <img class="img-responsive footer-photos__img" src="./statics/img/footer-gallery-1.jpg" alt="car">
+            </a>
+            <a href="#" class="footer-photos__link">
+              <img class="img-responsive footer-photos__img" src="./statics/img/footer-gallery-2.jpg" alt="car">
+            </a>
+            <a href="#" class="footer-photos__link">
+              <img class="img-responsive footer-photos__img" src="./statics/img/footer-gallery-3.jpg" alt="car">
+            </a>
+            <a href="#" class="footer-photos__link">
+              <img class="img-responsive footer-photos__img" src="./statics/img/footer-gallery-4.jpg" alt="car">
+            </a>
+          </div>
+        </div>
+        <div class="footer-column footer-column--border">
+          <h4 class="footer-title">LATEST BLOG POSTS</h4>
+          <p class="footer-text">The Tesla Model S isn’t the first truly autonomous car on the road...</p>
+          <a class="footer-comments special-text" href="#"><i class="footer-comments__icon far fa-comment-dots"></i> NO COMMENTS</a>
+        </div>
+        <div class="footer-column footer-column--border">
+          <h4 class="footer-title">SOCIAL NETWORK</h4>
+          <div class="footer-socials">
+            <a href="#" class="footer-socials__link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-socials__link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer-socials__link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-socials__link"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="footer-socials__link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-title">SUBSCRIBE</h4>
+          <form class="footer-form">
+            <div class="footer-form__wrap">
+              <input class="footer-form__input" type="email" name="email" required placeholder="Enter your email...">
+              <button class="footer-form__button" type="submit"><i class="footer-form__icon fas fa-wifi"></i></button>
+            </div>
+            <p class="footer-form__label">Get latest updates and offers.</p>
+          </form>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-title">SALES HOURS</h4>
+          <p class="footer-time"><span class="footer-time__day">Monday - Friday:</span> 09:00AM - 09:00PM</p>
+          <p class="footer-time"><span class="footer-time__day">Saturday:</span> 09:00AM - 07:00PM</p>
+          <p class="footer-time"><span class="footer-time__day">Sunday:</span> Closed</p>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-title">SERVICE HOURS</h4>
+          <p class="footer-time"><span class="footer-time__day">Monday - Friday:</span> 09:00AM - 09:00PM</p>
+          <p class="footer-time"><span class="footer-time__day">Saturday:</span> 09:00AM - 07:00PM</p>
+          <p class="footer-time"><span class="footer-time__day">Sunday:</span> Closed</p>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-title">PARTS HOURS</h4>
+          <p class="footer-time"><span class="footer-time__day">Monday - Friday:</span> 09:00AM - 09:00PM</p>
+          <p class="footer-time"><span class="footer-time__day">Saturday:</span> 09:00AM - 07:00PM</p>
+          <p class="footer-time"><span class="footer-time__day">Sunday:</span> Closed</p>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p class="footer-copyright__text">Copyright © 2021. <span class="special-text">Motors</span> – create by <span class="special-text">Truong Toan</span></p>
+        <div class="footer-copyright-contact">
+          <a href="#" class="footer-copyright-contact__link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-copyright-contact__link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-copyright-contact__link"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./statics/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+@mixin media-xs {
+  @media screen and (min-width: 0) {
+    @content;
+  }
+}
+
+@mixin media-s {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-l {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin animateHeight($duration: 0.36s) {
+  max-height: 0;
+  overflow: hidden;
+  transition: all $duration linear;
+}
+
+@mixin transitionAll($duration: 0.36s) {
+  transition: all $duration linear;
+}
+
+@mixin openSanFont {
+  font-family: 'Open Sans', sans-serif;
+}
