@@ -1210,6 +1210,7 @@ a {
   font-weight: 700;
   padding: 0 25px;
   line-height: 44px;
+  cursor: pointer;
 }
 .dealer-control__link.active {
   color: #CC6119;
@@ -1623,7 +1624,7 @@ a {
   }
 }
 .question {
-  background: url(/docs/statics/img/background-question.jpg) center/cover no-repeat fixed;
+  background: url("https://truongtoanfs.github.io/carDealership/statics/img/background-question.jpg") center/cover no-repeat fixed;
   padding: 30px 0;
 }
 .question-item {
@@ -1712,14 +1713,24 @@ a {
   width: 16px;
 }
 .special-products {
+  position: relative;
   overflow: hidden;
 }
 .special-products__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: margin 1s ease;
-  transition: margin 1s ease;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.special-products__container.drag {
+  -webkit-transition: left 0.2s ease-out;
+  transition: left 0.2s ease-out;
+}
+.special-products__container.shifting {
+  -webkit-transition: left 0.4s ease-out;
+  transition: left 0.4s ease-out;
 }
 .special-col {
   -ms-flex-negative: 0;
@@ -1730,6 +1741,7 @@ a {
   max-width: 290px;
   margin: 0 auto;
   position: relative;
+  cursor: pointer;
 }
 .special-car__link:hover .overflow {
   opacity: 1;
@@ -2034,7 +2046,7 @@ a {
 /* intro section */
 .intro {
   padding: 83px 0 79px;
-  background: #aaa url(/docs/statics/img/background-intro.jpg) center/cover no-repeat;
+  background: #aaa url("https://truongtoanfs.github.io/carDealership/statics/img/background-intro.jpg") center/cover no-repeat;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }

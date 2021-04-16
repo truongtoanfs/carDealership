@@ -20,6 +20,10 @@ const dealerSearchItems = document.querySelectorAll('.dealer-search-select__item
 const dealerSearchResets = document.querySelectorAll('.dealer-search-select__item--reset');
 const dealerSearchResetBtn = document.querySelector('.dealer-search-action__reset');
 
+const specialView = document.querySelector('.special-products');
+const specialContainer = document.querySelector('.special-products__container');
+let specialColumns = document.querySelectorAll('.special-col');
+const dotsContainer = document.querySelector('.special-pagination__dots');
 
 // expand header nav in mobile
 headerBarsIcon.addEventListener('click', (e) => {
@@ -316,22 +320,17 @@ function resetField(resetElm) {
 
 
 /* special section */
-const specialView = document.querySelector('.special-products');
-const specialContainer = document.querySelector('.special-products__container');
-const specialColumns = document.querySelectorAll('.special-col');
-const dotsContainer = document.querySelector('.special-pagination__dots');
-
 function specialResponsive() {
   const sizeView = specialView.clientWidth;
   let colWidth;
   let totalItemsWidth = 0;
-  let colNum;
-  let totalItems = 0;
-  if (window.innerWidth < 769) {
-    colNum = 1;
-  } else if (window.innerWidth < 993) {
+  let colNum = 1;
+  let totalItems = specialColumns.length;
+
+  if (window.innerWidth > 768) {
     colNum = 2;
-  } else {
+  }
+  if (window.innerWidth > 992) {
     colNum = 3;
   }
   // calculate width of column
@@ -339,13 +338,12 @@ function specialResponsive() {
   specialColumns.forEach(col => {
     col.style.width = colWidth + 'px';
     totalItemsWidth += colWidth;
-    totalItems += 1;
   })
   // container width set up
   specialContainer.style.width = totalItemsWidth + 'px';
 
   // dots number set up
-  dotsContainer.innerHTML = '';//avoid append child too much
+  dotsContainer.innerHTML = '';
   const allDots = Math.ceil(totalItems / colNum);
   for (let i = 1; i <= allDots; i++) {
     const span = document.createElement('span');
@@ -357,23 +355,16 @@ function specialResponsive() {
     dotsContainer.appendChild(span);
   }
 }
-
 specialResponsive();
+
 // control slide
 function changeSlide(dot) {
-  if (dot.classList.contains('active')) {
-    return;
-  }
-  // remove active class
-  const activedElm = document.querySelector('.special-pagination__dots-element.active');
-  activedElm.classList.remove('active');
-  // add active class to clicked elm
-  dot.classList.add('active');
-
+  checkDot(dot);
   const stepNum = dot.id.slice(4) - 1;
-  const sizeView = specialView.clientWidth;
+  const sizeView = specialView.offsetWidth;
   const jumpWidth = stepNum * sizeView;
-  specialContainer.style.marginLeft = - jumpWidth + 'px';
+  specialContainer.style.left = - jumpWidth + 'px';
+  specialContainer.classList.add('shifting');
 }
 
 function btnControl(btn) {
@@ -384,46 +375,121 @@ function btnControl(btn) {
 
   if (btn.classList.contains('btn-prev')) {
     if (activedDot === 0) {
-      changeSlide(dotsCollection[lastIndex]);
+      return;
     } else {
       changeSlide(dotsCollection[activedDot - 1]);
     }
   } else {
     if (activedDot === lastIndex) {
-      changeSlide(dotsCollection[0]);
+      return;
     } else {
       changeSlide(dotsCollection[activedDot + 1]);
     }
   }
 }
 
+function checkDot(dot) {
+  if (dot.classList.contains('active')) {
+    return;
+  }
+  // remove active class
+  const activedElm = document.querySelector('.special-pagination__dots-element.active');
+  activedElm.classList.remove('active');
+  // add active class to clicked elm
+  dot.classList.add('active');
+}
+
 function dragSlides() {
-  let pressed = false;
-  let offsetMouse1;
-  let offsetMouse2;
-  let offsetContainer;
-  let rect = specialView.getBoundingClientRect();
+  const sizeView = specialView.clientWidth;
+  let posX1 = 0,
+    dragWidth = 0,
+    posInitial,
+    posFinal;
 
-  specialView.addEventListener('mousedown', (e) => {
+  // Mouse events
+  specialContainer.onmousedown = dragStart;
+
+  // Touch events
+  specialContainer.addEventListener('touchstart', dragStart);
+
+  // Transition events
+  specialContainer.addEventListener('transitionend', finishDrag);
+
+  function dragStart(e) {
+    e.preventDefault();
+
+    // remove shifting class
+    specialContainer.classList.remove('shifting');
+
+    if (e.type == 'touchstart') {
+      posX1 = e.touches[0].clientX;
+      specialContainer.addEventListener('touchend', dragEnd);
+      specialContainer.addEventListener('touchmove', dragAction);
+    } else {
+      posX1 = e.clientX;
+      document.onmouseup = dragEnd;
+      document.onmousemove = dragAction;
+    }
+  }
+
+  function dragAction(e) {
+    if (e.type == 'touchmove') {
+      dragWidth = e.touches[0].clientX - posX1;
+      posX1 = e.touches[0].clientX;
+    } else {
+      dragWidth = e.clientX - posX1;
+      posX1 = e.clientX;
+    }
+    posInitial = specialContainer.offsetLeft;
+    specialContainer.style.left = (dragWidth + posInitial) + "px";
+    posFinal = specialContainer.offsetLeft;
+
+    // changeDot
+    moveDot(posFinal);
+    // boundary
+    const columnWidth = specialColumns[0].offsetWidth;
+    const containerWidth = specialContainer.offsetWidth;
+    const boundaryLeft = columnWidth / 20; //20 is any
+    const boundaryRight = -(containerWidth - sizeView + boundaryLeft);
+    if(posFinal > boundaryLeft) {
+      if (e.type == 'touchmove') {
+        specialContainer.removeEventListener('touchmove', dragAction);
+      }else {
+        document.onmousemove = null;
+      }
+    } else if (posFinal < boundaryRight) {
+      if(e.type == 'touchmove') {
+        specialContainer.removeEventListener('touchmove', dragAction);
+      } else {
+        document.onmousemove = null;
+      }
+    }
+  }
+
+  function dragEnd(e) {
+    const columnWidth = specialColumns[0].offsetWidth;
+    const steps = Math.round(posFinal / columnWidth);
     
-    e.preventDefault();
-    pressed = true;
-    offsetMouse1 = e.clientX - rect.left;
-  })
+    specialContainer.classList.add('drag');
+    specialContainer.style.left = steps * columnWidth + "px";
 
-  window.addEventListener('mouseup', (e) => {
-    e.preventDefault();
-    pressed = false;
-  });
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
 
-  specialView.addEventListener('mousemove', (e) => {
-    if (!pressed) return;
-    e.preventDefault();
+  function finishDrag() {
+    specialContainer.classList.remove('drag');
+    
+    moveDot(specialContainer.offsetLeft);
+  }
 
-    offsetMouse2 = e.clientX - rect.left;
-    offsetContainer = specialContainer.offsetLeft;
-    specialContainer.style.marginLeft = (offsetMouse2 - offsetMouse1 + offsetContainer) + 'px';
-  });
+  function moveDot(posFinal) {
+    const temp = Math.abs(posFinal / sizeView);
+    const dotIndex = Math.floor(temp);
+    const thisDot = document.querySelectorAll('.special-pagination__dots-element')[dotIndex];
+
+    checkDot(thisDot);
+  }
 }
 
 function controlSlides() {
@@ -450,10 +516,6 @@ window.addEventListener('resize', () => {
   specialResponsive();
   controlSlides();
 });
-
-
-
-
 
 // when click outside element clicked display none them;
 document.querySelector('body').addEventListener('click', () => {
