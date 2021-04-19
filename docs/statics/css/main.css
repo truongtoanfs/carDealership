@@ -1652,9 +1652,7 @@ a {
           align-items: flex-start;
 }
 .question-item__img {
-  width: 74px;
-  height: auto;
-  margin-right: 28px;
+  margin: 11px 28px 0 0;
 }
 .question-item__heading {
   font-size: 26px;

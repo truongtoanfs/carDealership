@@ -2,15 +2,17 @@ const headerBarsIcon = document.querySelector('.header-bars-icon');
 const mobileMenu = document.getElementById('header-nav');
 const angleItems = document.querySelectorAll('.header-nav__item-wrap');
 const itemsExpanded = document.querySelectorAll('.header-top__item-expanded');
+
 const navbar = document.querySelector('.navbar');
+
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.slide-control-prev');
 const nextBtn = document.querySelector('.slide-control-next');
 const prevBtnImg = document.querySelector('#slide-control__img-prev');
 const nextBtnImg = document.querySelector('#slide-control__img-next');
+
 const newCarsContainer = document.querySelector('#new-cars .container');
 const usedCarsContainer = document.querySelector('#used-cars .container');
-
 const dealerTabs = document.querySelectorAll('.dealer-control__link');
 const dealerSearchs = document.querySelectorAll('.dealer-search-select__title');
 const dealerSearchInputs = document.querySelectorAll('.dealer-search-select__input');
@@ -25,13 +27,7 @@ const specialContainer = document.querySelector('.special-products__container');
 let specialColumns = document.querySelectorAll('.special-col');
 const dotsContainer = document.querySelector('.special-pagination__dots');
 
-// expand header nav in mobile
-headerBarsIcon.addEventListener('click', (e) => {
-  e.stopPropagation();
-  collapseBars();
-})
-
-function collapseBars() {
+function closeMenuNavbar() {
   angleItems.forEach(angleItem => {
     if (angleItem.classList.contains('active')) {
       // rotate icon
@@ -39,8 +35,11 @@ function collapseBars() {
       const collapseElm = angleItem.nextElementSibling;
       collapseElm.style.maxHeight = null;
     }
-
   });
+}
+
+function collapseBars() {
+  closeMenuNavbar();
 
   if(mobileMenu.style.maxHeight) {
     mobileMenu.style.maxHeight = null;
@@ -49,13 +48,14 @@ function collapseBars() {
   }
 }
 
-angleItems.forEach(angleItem => {
-  angleItem.addEventListener('click', (e) => {
+function toggleNavbar() {
+  headerBarsIcon.addEventListener('click', (e) => {
     e.stopPropagation();
-    
-    collapseItem(angleItem);
-    })
-})
+    collapseBars();
+  })
+}
+toggleNavbar();
+
 
 function collapseItem(angleItem) {
   // rotate icon
@@ -73,6 +73,17 @@ function collapseItem(angleItem) {
     collapseElm.style.maxHeight = collapseElm.scrollHeight + 'px';
   }
 }
+
+function toggleMenu() {
+  angleItems.forEach(angleItem => {
+    angleItem.addEventListener('click', (e) => {
+      e.stopPropagation();
+      
+      collapseItem(angleItem);
+      })
+  })
+}
+toggleMenu();
 
 
 // open list in header top
@@ -93,12 +104,11 @@ itemsExpanded.forEach(item => {
 })
 
 
-
-
 // sticky navbar
 window.onscroll = function() {stickyNavbar()};
-const position = navbar.offsetTop;
 function stickyNavbar() {
+  const position = navbar.offsetTop;
+
   if (window.pageYOffset >= position) {
     navbar.classList.add("sticky")
   } else {
@@ -532,9 +542,3 @@ document.querySelector('body').addEventListener('click', () => {
     }
   })
 })
-
-// optimize section
-/* 
-  + module js follow sections of HTML file
-    avoid complict between functions 
-*/
